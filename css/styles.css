@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300:400;600&display=swap');
 @import "reset.css";
 @import "status-bar.css";
 @import "header.css";
 @import "nav-bar.css";
+@import "friend.css";
+@import "friends.css";
+@import "find.css";
+@import "more.css";
+@import "settings.css";
+@import "chat.css";
+@import "mobile.css";
 
-* {
-    box-sizing: border-box;
+* {                         /* 모든 element에 적용 */
+    box-sizing: border-box; /* padding을 추가해도 box size는 바뀌지 않게 해주는 설정 */
 }
 
 body{
@@ -17,4 +24,20 @@ body{
 
 a {
     color: inherit; /* 부모 요소로부터 색깔을 받아온다는 의미 */
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+} 
+
+main {
+    animation: fadeIn 0.5s ease-in-out;
 }
